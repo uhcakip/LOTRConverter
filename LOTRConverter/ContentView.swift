@@ -10,43 +10,63 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            // background image
+            Image("Background")
+                .resizable()
+                .ignoresSafeArea()
 
             VStack {
-                // prancing pony image
+                Image("PrancingPony")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
 
-                // currency exchange text
+                Text("Currency Exchange")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
 
-                // currency conversion section
                 HStack {
-                    // left conversion section
                     VStack {
-                        // currency
                         HStack {
-                            // currency image
+                            Image("SilverPiece")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
 
-                            // currency text
+                            Text("Silver Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
                         }
 
                         // textfield
                     }
 
-                    // equal sign
+                    Image(systemName: "equal")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .symbolEffect(.pulse)
 
-                    // right conversion section
                     VStack {
-                        // currency
                         HStack {
-                            // currency image
+                            Text("Gold Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
 
-                            // currency text
+                            Image("GoldPiece")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
                         }
 
                         // textfield
                     }
                 }
 
+                Spacer()
+
                 // info button
+                Image(systemName: "info.circle")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
             }
         }
     }
