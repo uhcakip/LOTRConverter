@@ -46,9 +46,10 @@ struct ExchangeInfoView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.brown)
                 .padding()
-
+                .foregroundColor(.white)
             }
         }
+        .foregroundColor(.black)
     }
 }
 
