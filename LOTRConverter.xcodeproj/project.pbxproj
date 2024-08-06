@@ -11,6 +11,7 @@
 		E8807DA92C5CAFF300DF753B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8807DA82C5CAFF300DF753B /* ContentView.swift */; };
 		E8807DAB2C5CAFF500DF753B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8807DAA2C5CAFF500DF753B /* Assets.xcassets */; };
 		E8807DAE2C5CAFF500DF753B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8807DAD2C5CAFF500DF753B /* Preview Assets.xcassets */; };
+		E8B13A092C61E4E8003430CE /* ExchangeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B13A082C61E4E8003430CE /* ExchangeInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E8807DA82C5CAFF300DF753B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E8807DAA2C5CAFF500DF753B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8807DAD2C5CAFF500DF753B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8B13A082C61E4E8003430CE /* ExchangeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E8807DA62C5CAFF300DF753B /* LOTRConverterApp.swift */,
 				E8807DA82C5CAFF300DF753B /* ContentView.swift */,
+				E8B13A082C61E4E8003430CE /* ExchangeInfoView.swift */,
 				E8807DAA2C5CAFF500DF753B /* Assets.xcassets */,
 				E8807DAC2C5CAFF500DF753B /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				E8807DA92C5CAFF300DF753B /* ContentView.swift in Sources */,
 				E8807DA72C5CAFF300DF753B /* LOTRConverterApp.swift in Sources */,
+				E8B13A092C61E4E8003430CE /* ExchangeInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
