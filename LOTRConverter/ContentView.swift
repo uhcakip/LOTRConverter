@@ -80,6 +80,7 @@ struct ContentView: View {
                     Spacer()
 
                     Button {
+                        showExchangeInfo.toggle()
                     } label: {
                         Image(systemName: "info.circle")
                             .font(.largeTitle)
@@ -88,6 +89,9 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .sheet(isPresented: $showExchangeInfo) {
+            ExchangeInfoView()
         }
     }
 }

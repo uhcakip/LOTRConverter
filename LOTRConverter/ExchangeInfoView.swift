@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExchangeInfoView: View {
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         ZStack {
             Image(.parchment)
@@ -30,7 +32,7 @@ struct ExchangeInfoView: View {
                 ExchangeRateView(leftImage: .silverPenny, rightImage: .copperPenny, text: "1 Silver Penny = 100 Copper Pennies")
 
                 Button("Done") {
-
+                    dismiss()
                 }
                 .font(.title)
                 .buttonStyle(.borderedProminent)
