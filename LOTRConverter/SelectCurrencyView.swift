@@ -42,9 +42,6 @@ struct SelectCurrencyView: View {
             .multilineTextAlignment(.center)
             .padding()
         }
-        .onTapGesture {
-            print("[SelectCurrencyView] from:", from, "to:", to)
-        }
     }
 }
 

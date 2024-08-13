@@ -29,7 +29,6 @@ struct CurrencyIconGridView: View {
                     CurrencyIconView(image: currency.image, name: currency.name)
                         .onTapGesture {
                             self.currency = currency
-                            print("[CurrencyIconGridView] currency changed to \(self.currency)")
                         }
                 }
             }
