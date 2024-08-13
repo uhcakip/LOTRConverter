@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct CurrencyIconGridView: View {
-    @State var currency: CurrencyModel
-    
+    @Binding var currency: CurrencyModel
+
     var body: some View {
         let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
             GridItem(.flexible())
         ]
-        
+
         LazyVGrid(columns: columns) {
             ForEach(CurrencyModel.allCases) { currency in
                 if self.currency == currency {
@@ -29,14 +29,14 @@ struct CurrencyIconGridView: View {
                     CurrencyIconView(image: currency.image, name: currency.name)
                         .onTapGesture {
                             self.currency = currency
+                            print("[CurrencyIconGridView] currency changed to \(self.currency)")
                         }
                 }
             }
         }
-        
     }
 }
 
 #Preview {
-    CurrencyIconGridView(currency: .silverPenny)
+    CurrencyIconGridView(currency: .constant(.silverPenny))
 }
