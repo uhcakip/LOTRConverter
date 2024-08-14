@@ -23,12 +23,12 @@ struct SelectCurrencyView: View {
                 Text("Select the currency you are starting with:")
                     .fontWeight(.bold)
 
-                CurrencyIconGridView(currency: $from)
+                CurrencyIconGridView(selectedCurrency: $from)
 
                 Text("Select the currency you would like to convert to:")
                     .fontWeight(.bold)
 
-                CurrencyIconGridView(currency: $to)
+                CurrencyIconGridView(selectedCurrency: $to)
 
                 Button("Done") {
                     dismiss()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurrencyIconGridView: View {
-    @Binding var currency: CurrencyModel
+    @Binding var selectedCurrency: CurrencyModel
 
     var body: some View {
         let columns = [
@@ -19,7 +19,7 @@ struct CurrencyIconGridView: View {
 
         LazyVGrid(columns: columns) {
             ForEach(CurrencyModel.allCases) { currency in
-                if self.currency == currency {
+                if self.selectedCurrency == currency {
                     CurrencyIconView(image: currency.image, name: currency.name)
                         .shadow(color: .black, radius: 10)
                         .overlay(RoundedRectangle(cornerRadius: 25)
@@ -28,7 +28,7 @@ struct CurrencyIconGridView: View {
                 } else {
                     CurrencyIconView(image: currency.image, name: currency.name)
                         .onTapGesture {
-                            self.currency = currency
+                            self.selectedCurrency = currency
                         }
                 }
             }
@@ -37,5 +37,5 @@ struct CurrencyIconGridView: View {
 }
 
 #Preview {
-    CurrencyIconGridView(currency: .constant(.silverPenny))
+    CurrencyIconGridView(selectedCurrency: .constant(.silverPenny))
 }
