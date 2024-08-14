@@ -51,6 +51,9 @@ struct ContentView: View {
 
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
+                            .onSubmit {
+                                
+                            }
                     }
 
                     Image(systemName: "equal")
@@ -103,7 +106,7 @@ struct ContentView: View {
             ExchangeInfoView()
         }
         .sheet(isPresented: $showSelectCurrency) {
-            SelectCurrencyView(from: $leftCurrency, to: $rightCurrency)
+            SelectCurrencyView(source: $leftCurrency, target: $rightCurrency)
         }
     }
 }
