@@ -48,6 +48,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E82465AD2C711BF600AD501A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E82465AE2C711C3400AD501A /* CurrencyExchange */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E82465AE2C711C3400AD501A /* CurrencyExchange */ = {
+			isa = PBXGroup;
+			children = (
+				E82465AF2C711C6600AD501A /* Views */,
+				E82465B02C711C6E00AD501A /* Models */,
+				E82465B12C711C7200AD501A /* Components */,
+				E82465B22C711C7800AD501A /* Tips */,
+			);
+			path = CurrencyExchange;
+			sourceTree = "<group>";
+		};
+		E82465AF2C711C6600AD501A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8807DA82C5CAFF300DF753B /* ContentView.swift */,
+				E8B13A082C61E4E8003430CE /* ExchangeInfoView.swift */,
+				E8D7FB4C2C63CD9E0000FC35 /* SelectCurrencyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E82465B02C711C6E00AD501A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E829CF0F2C6720AC0077662C /* CurrencyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E82465B12C711C7200AD501A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E81947C82C621EE1005982F5 /* ExchangeRateView.swift */,
+				E8D7FB4E2C63D5F00000FC35 /* CurrencyIconView.swift */,
+				E829CF132C6A56A10077662C /* CurrencyIconGridView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E82465B22C711C7800AD501A /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				E82465AB2C71189400AD501A /* CurrencyTip.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
 		E8807D9A2C5CAFF300DF753B = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				E8807DA62C5CAFF300DF753B /* LOTRConverterApp.swift */,
-				E829CF0F2C6720AC0077662C /* CurrencyModel.swift */,
-				E8807DA82C5CAFF300DF753B /* ContentView.swift */,
-				E8B13A082C61E4E8003430CE /* ExchangeInfoView.swift */,
-				E81947C82C621EE1005982F5 /* ExchangeRateView.swift */,
-				E8D7FB4C2C63CD9E0000FC35 /* SelectCurrencyView.swift */,
-				E8D7FB4E2C63D5F00000FC35 /* CurrencyIconView.swift */,
-				E829CF132C6A56A10077662C /* CurrencyIconGridView.swift */,
-				E82465AB2C71189400AD501A /* CurrencyTip.swift */,
+				E82465AD2C711BF600AD501A /* Features */,
 				E8807DAA2C5CAFF500DF753B /* Assets.xcassets */,
 				E8807DAC2C5CAFF500DF753B /* Preview Content */,
 			);
