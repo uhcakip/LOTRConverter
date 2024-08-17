@@ -17,6 +17,8 @@ struct ContentView: View {
     @State var rightCurrency = CurrencyModel.goldPiece
     @State var leftAmount = ""
     @State var rightAmount = ""
+    @FocusState var leftAmountTyping
+    @FocusState var rightAmountTyping
 
     var body: some View {
         ZStack {
@@ -54,9 +56,7 @@ struct ContentView: View {
 
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
-                            .onSubmit {
-                                
-                            }
+                            .focused($leftAmountTyping)
                     }
 
                     Image(systemName: "equal")
@@ -83,6 +83,7 @@ struct ContentView: View {
                         TextField("Amount", text: $rightAmount)
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)
+                            .focused($rightAmountTyping)
                     }
                 }
                 .padding()
@@ -104,6 +105,22 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .onChange(of: leftAmount) {
+            if leftAmountTyping {
+                rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
+            }
+        }
+        .onChange(of: rightAmount) {
+            if rightAmountTyping {
+                leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
+            }
+        }
+        .onChange(of: leftCurrency) {
+            leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
+        }
+        .onChange(of: rightCurrency) {
+            rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
         }
         .sheet(isPresented: $showExchangeInfo) {
             ExchangeInfoView()
