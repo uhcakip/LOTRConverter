@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Inject
 
 struct ContentView: View {
+    @ObserveInjection var inject
+
     @State var showExchangeInfo = false
     @State var showSelectCurrency = false
     @State var leftCurrency = CurrencyModel.silverPiece
@@ -108,6 +111,7 @@ struct ContentView: View {
         .sheet(isPresented: $showSelectCurrency) {
             SelectCurrencyView(source: $leftCurrency, target: $rightCurrency)
         }
+        .enableInjection()
     }
 }
 
