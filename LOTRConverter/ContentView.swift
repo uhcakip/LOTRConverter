@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Inject
+import TipKit
 
 struct ContentView: View {
     @ObserveInjection var inject
@@ -53,6 +54,7 @@ struct ContentView: View {
                         .onTapGesture {
                             showSelectCurrency.toggle()
                         }
+                        .popoverTip(CurrencyTip(), arrowEdge: .bottom)
 
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
@@ -107,6 +109,9 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .task {
+            try? Tips.configure()
         }
         .onChange(of: leftAmount) {
             if leftAmountTyping {
