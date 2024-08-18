@@ -23,13 +23,12 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            // FIXME: use static property for asset catalog images
-            Image("Background")
+            Image(.background)
                 .resizable()
                 .ignoresSafeArea()
 
             VStack {
-                Image("PrancingPony")
+                Image(.prancingPony)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 200)
