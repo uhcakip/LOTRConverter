@@ -128,6 +128,10 @@ struct ContentView: View {
         .onChange(of: rightCurrency) {
             rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
         }
+        .onTapGesture {
+            leftAmountTyping = false
+            rightAmountTyping = false
+        }
         .sheet(isPresented: $showExchangeInfo) {
             ExchangeInfoView()
         }
