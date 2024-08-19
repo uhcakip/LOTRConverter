@@ -21,6 +21,12 @@ struct CurrencyExchangeView: View {
     @FocusState var leftAmountTyping
     @FocusState var rightAmountTyping
 
+    init() {
+        let savedSelections = UserDefaults.loadCurrencySelections()
+        _leftCurrency = State(initialValue: savedSelections.left)
+        _rightCurrency = State(initialValue: savedSelections.right)
+    }
+
     var body: some View {
         ZStack {
             Image(.background)
@@ -123,9 +129,11 @@ struct CurrencyExchangeView: View {
             }
         }
         .onChange(of: leftCurrency) {
+            UserDefaults.saveCurrencySelections(left: leftCurrency, right: rightCurrency)
             leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
         }
         .onChange(of: rightCurrency) {
+            UserDefaults.saveCurrencySelections(left: leftCurrency, right: rightCurrency)
             rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
         }
         .onTapGesture {
