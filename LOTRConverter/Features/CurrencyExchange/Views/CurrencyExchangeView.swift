@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CurrencyExchangeView.swift
 //  LOTRConverter
 //
 //  Created by Yuna Chou on 2024/8/2.
@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 import TipKit
 
-struct ContentView: View {
+struct CurrencyExchangeView: View {
     @ObserveInjection var inject
 
     @State var showExchangeInfo = false
@@ -53,7 +53,7 @@ struct ContentView: View {
                         .onTapGesture {
                             showSelectCurrency.toggle()
                         }
-                        .popoverTip(CurrencyTip(), arrowEdge: .bottom)
+                        .popoverTip(CurrencySelectionTip(), arrowEdge: .bottom)
 
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
@@ -133,15 +133,15 @@ struct ContentView: View {
             rightAmountTyping = false
         }
         .sheet(isPresented: $showExchangeInfo) {
-            ExchangeInfoView()
+            CurrencyExchangeInfoView()
         }
         .sheet(isPresented: $showSelectCurrency) {
-            SelectCurrencyView(source: $leftCurrency, target: $rightCurrency)
+            CurrencySelectionView(source: $leftCurrency, target: $rightCurrency)
         }
         .enableInjection()
     }
 }
 
 #Preview {
-    ContentView()
+    CurrencyExchangeView()
 }

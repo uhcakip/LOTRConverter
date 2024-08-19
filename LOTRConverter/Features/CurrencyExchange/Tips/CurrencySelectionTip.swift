@@ -8,7 +8,7 @@
 import Foundation
 import TipKit
 
-struct CurrencyTip: Tip {
+struct CurrencySelectionTip: Tip {
     var title = Text("Change Currency")
 
     var message: Text? = Text("You can tap left or right currency icon to bring up the Select Currency screen.")

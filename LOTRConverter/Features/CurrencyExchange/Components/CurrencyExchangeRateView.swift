@@ -1,5 +1,5 @@
 //
-//  ExchangeRateView.swift
+//  CurrencyExchangeRateView.swift
 //  LOTRConverter
 //
 //  Created by Yuna Chou on 2024/8/6.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExchangeRateView: View {
+struct CurrencyExchangeRateView: View {
     let leftImage: ImageResource
     let rightImage: ImageResource
     let text: String
@@ -30,5 +30,5 @@ struct ExchangeRateView: View {
 }
 
 #Preview {
-    ExchangeRateView(leftImage: .silverPiece, rightImage: .silverPenny, text: "1 Silver Piece = 10 Silver Pennies")
+    CurrencyExchangeRateView(leftImage: .silverPiece, rightImage: .silverPenny, text: "1 Silver Piece = 10 Silver Pennies")
 }

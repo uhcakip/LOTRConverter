@@ -1,5 +1,5 @@
 //
-//  SelectCurrencyView.swift
+//  CurrencySelectionView.swift
 //  LOTRConverter
 //
 //  Created by Yuna Chou on 2024/8/7.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectCurrencyView: View {
+struct CurrencySelectionView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var source: CurrencyModel
     @Binding var target: CurrencyModel
@@ -46,5 +46,5 @@ struct SelectCurrencyView: View {
 }
 
 #Preview {
-    SelectCurrencyView(source: .constant(.silverPiece), target: .constant(.goldPiece))
+    CurrencySelectionView(source: .constant(.silverPiece), target: .constant(.goldPiece))
 }

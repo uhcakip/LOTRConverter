@@ -1,5 +1,5 @@
 //
-//  ExchangeInfoView.swift
+//  CurrencyExchangeInfoView.swift
 //  LOTRConverter
 //
 //  Created by Yuna Chou on 2024/8/6.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExchangeInfoView: View {
+struct CurrencyExchangeInfoView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -26,10 +26,10 @@ struct ExchangeInfoView: View {
                     .font(.title3)
                     .padding()
 
-                ExchangeRateView(leftImage: .goldPiece, rightImage: .goldPenny, text: "1 Gold Piece = 4 Gold Pennies")
-                ExchangeRateView(leftImage: .goldPenny, rightImage: .silverPiece, text: "1 Gold Penny = 4 Silver Pieces")
-                ExchangeRateView(leftImage: .silverPiece, rightImage: .silverPenny, text: "1 Silver Piece = 4 Silver Pennies")
-                ExchangeRateView(leftImage: .silverPenny, rightImage: .copperPenny, text: "1 Silver Penny = 100 Copper Pennies")
+                CurrencyExchangeRateView(leftImage: .goldPiece, rightImage: .goldPenny, text: "1 Gold Piece = 4 Gold Pennies")
+                CurrencyExchangeRateView(leftImage: .goldPenny, rightImage: .silverPiece, text: "1 Gold Penny = 4 Silver Pieces")
+                CurrencyExchangeRateView(leftImage: .silverPiece, rightImage: .silverPenny, text: "1 Silver Piece = 4 Silver Pennies")
+                CurrencyExchangeRateView(leftImage: .silverPenny, rightImage: .copperPenny, text: "1 Silver Penny = 100 Copper Pennies")
 
                 Button("Done") {
                     dismiss()
@@ -46,5 +46,5 @@ struct ExchangeInfoView: View {
 }
 
 #Preview {
-    ExchangeInfoView()
+    CurrencyExchangeInfoView()
 }
