@@ -11,7 +11,6 @@ import TipKit
 
 struct CurrencyExchangeView: View {
     @ObserveInjection var inject
-
     @State var showExchangeInfo = false
     @State var showSelectCurrency = false
     @State var leftCurrency = CurrencyModel.silverPiece
@@ -29,9 +28,7 @@ struct CurrencyExchangeView: View {
 
     var body: some View {
         ZStack {
-            Image(.background)
-                .resizable()
-                .ignoresSafeArea()
+            BackgroundView(type: .main)
 
             VStack {
                 Image(.prancingPony)

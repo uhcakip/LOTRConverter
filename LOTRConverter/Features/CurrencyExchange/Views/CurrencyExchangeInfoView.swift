@@ -12,10 +12,7 @@ struct CurrencyExchangeInfoView: View {
 
     var body: some View {
         ZStack {
-            Image(.parchment)
-                .resizable()
-                .scaleEffect(1.1)
-                .ignoresSafeArea()
+            BackgroundView(type: .parchment)
 
             VStack {
                 Text("Exchange Rates")
