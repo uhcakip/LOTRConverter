@@ -13,6 +13,13 @@ The project is based on the Udemy course [iOS 18, SwiftUI 6, & Swift 6: Build iO
 - Responsive layout adapting to different iOS devices
 
 ## Project Structure
+- `Features/`: Contains the main feature of the app, Currency Exchange
+  - `Views/`: Main views for the currency conversion interface
+  - `Models/`: Data models and business logic
+  - `Components/`: Reusable UI components
+  - `Extensions/`: Swift extensions for additional functionality
+  - `Tips/`: Custom tips for improved user experience
+
 ```
 LOTRConverter/
 ├── LOTRConverterApp.swift
@@ -36,12 +43,6 @@ LOTRConverter/
 │       └── Tips/
 │           └── CurrencySelectionTip.swift
 ```
-
-## Key Components
-- `CurrencyExchangeView`: Main view for the currency conversion interface
-- `CurrencyModel`: Enum representing different currencies and conversion logic
-- `CurrencyInputView`: Reusable component for currency selection and input
-- `UserDefaultsExtension`: Extension for persisting user preferences
 
 ## Enhancements and Refactoring
 - Implemented a more modular project structure
