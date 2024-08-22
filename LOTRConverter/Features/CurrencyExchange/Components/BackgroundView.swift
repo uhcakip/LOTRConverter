@@ -10,7 +10,7 @@ import Inject
 
 struct BackgroundView: View {
     enum BackgroundType {
-        case main
+        case planks
         case parchment
     }
 
@@ -18,8 +18,8 @@ struct BackgroundView: View {
 
     var body: some View {
         switch type {
-        case .main:
-            Image(.background)
+        case .planks:
+            Image(.planks)
                 .resizable()
                 .ignoresSafeArea()
         case .parchment:

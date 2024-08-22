@@ -28,7 +28,7 @@ struct CurrencyExchangeView: View {
 
     var body: some View {
         ZStack {
-            BackgroundView(type: .main)
+            BackgroundView(type: .planks)
 
             VStack {
                 Image(.prancingPony)
