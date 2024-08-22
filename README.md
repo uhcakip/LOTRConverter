@@ -59,4 +59,4 @@ LOTRConverter/
 ## Dependencies
 - [Inject](https://github.com/krzysztofzablocki/Inject) - Used for hot reloading during development
 
-
+## TODO: upload screenshots or screen recordings for demo.
