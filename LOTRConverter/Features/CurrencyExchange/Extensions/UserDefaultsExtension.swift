@@ -22,7 +22,7 @@ extension UserDefaults {
         }
 
         return (
-            getCurrency(leftCurrencyKey, .silverPiece),
+            getCurrency(leftCurrencyKey, .copperPenny),
             getCurrency(rightCurrencyKey, .goldPiece)
         )
     }
