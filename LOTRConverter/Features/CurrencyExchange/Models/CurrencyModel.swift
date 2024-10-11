@@ -50,7 +50,9 @@ enum CurrencyModel: Double, CaseIterable, Identifiable {
         guard let amount = Double(amount) else {
             return ""
         }
-        return String(format: "%.2f", (amount / self.rawValue) * currency.rawValue)
+
+        let result = (amount / self.rawValue) * currency.rawValue
+        let format = result.truncatingRemainder(dividingBy: 1) == 0 ? "%.0f" : "%.2f"
+        return String(format: format, result)
     }
 }
-
