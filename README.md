@@ -1,10 +1,11 @@
 <div align="center">
+  <h1>LOTRConverter</h1>
 
-# LOTR Currency Converter
-
-[![Swift 5.9](https://img.shields.io/badge/Swift-5.9-orange?logo=swift)](https://developer.apple.com/swift/)
-[![Xcode 15.4](https://img.shields.io/badge/Xcode-15.4-007ACC?logo=Xcode&logoColor=blue)](https://developer.apple.com/xcode/)
-[![iOS 17](https://img.shields.io/badge/iOS-17-363737?logo=apple&logoColor=white)](https://developer.apple.com/ios/)
+  <p>
+    <a href="https://developer.apple.com/swift/" target="_blank"><img src="https://img.shields.io/badge/Swift-5.9-585b70?logo=swift&style=for-the-badge&labelColor=313244&logoColor=fab387" alt="Swift 5.10"></a>
+    <a href="https://developer.apple.com/xcode/"><img src="https://img.shields.io/badge/Xcode-15.4-585b70?logo=Xcode&style=for-the-badge&labelColor=313244&logoColor=89b4fa" alt="Xcode 15.4"></a>
+    <a href="https://developer.apple.com/ios/"><img src="https://img.shields.io/badge/iOS-17-585b70?logo=apple&style=for-the-badge&labelColor=313244&logoColor=cdd6f4" alt="iOS 17"></a>
+  </p>
 
   <div>
     <img src="_Demo/1-mockup-main-screen.png" alt="Main Screen" width="250"/>&nbsp;&nbsp;&nbsp;
